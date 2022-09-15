@@ -3,10 +3,25 @@ document.querySelector('.fa-solid.fa-magnifying-glass').addEventListener('click'
 document.querySelector('.fa-solid.fa-x').addEventListener('click', hideSearchBar);
 document.querySelector('.fa-solid.fa-bars').addEventListener('click', showMenu);
 document.querySelector('.fa-solid.fa-x.nav').addEventListener('click', hideMenu);
+document.querySelector('.form-input').addEventListener('keyup', test);
+document.querySelector('.form-input').addEventListener('keypress', test2);
+
+function test(e) {
+    console.log(e.target.value);
+}
+function test2(e) {
+    if(e.key !== 'Enter') return;
+
+    console.log('submited value');
+    e.target.value = '';
+}
 
 
 function showMenu() {
     console.log('aratam meniul');
+
+    let navLinks = document.querySelectorAll('.nav-link');
+    console.log(navLinks.length)
 
     let tl = gsap.timeline({duration: 0.2});
 
@@ -20,6 +35,14 @@ function showMenu() {
         opacity: 1,
         
     });
+
+    for(let i = 0; i < navLinks.length; ++i) {
+        tl.from(navLinks[i], {
+            x: 400,
+            duration: 0.2
+        })
+        console.log(navLinks[i]);
+    }
     
 }
 function hideMenu() {
