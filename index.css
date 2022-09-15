@@ -1,0 +1,283 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color:#364053;
+}
+
+.home-section {
+    width: 100%;
+    height: 100%;
+    background-color: #232C3D;
+    overflow-x: hidden;
+}
+
+.home-header {
+    width: 100%;
+    height: 40%;
+    position: relative;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1D3676;
+    opacity: 0.6;
+}
+
+.over-image-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header-text {
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text:nth-child(1) {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+.text:nth-child(2) {
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+}
+
+.fa-solid.fa-magnifying-glass {
+    color: white;
+    font-size: 20px;
+    margin-top: 1rem;
+
+}
+
+.fa-solid.fa-magnifying-glass:hover {
+    cursor: pointer;
+    color: #c7c7c7;
+}
+
+.header-form {
+    display: none;
+    /* display: flex; */
+    width: 30%;
+    height: 70px;
+    /* background-color: white; */
+    /* border: 1px solid white; */
+    position: relative;
+
+}
+
+.fa-solid.fa-bars {
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.fa-solid.fa-x.nav:hover,
+.fa-solid.fa-bars:hover {
+    cursor: pointer;
+    color: #c7c7c7;
+}
+
+.form-input {
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 17px;
+    /* color: #545983; */
+    color: #5974D4;
+    border: none;
+    padding-right: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+
+.form-input:focus {
+    outline-color: rgb(132, 171, 255);
+    outline-width: 3px;
+    outline-style: solid;
+}
+
+.fa-solid.fa-x {
+    position: absolute;
+    color: #5974D4;
+    top: 1rem;
+    right: 1rem;
+    font-size: 24px;
+}
+.fa-solid.fa-x:hover {
+
+    color: #3d5198;
+  
+}
+
+.fa-solid.fa-x.nav {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    color: white;
+    font-size: 24px;
+}
+.fa-solid.fa-x:hover {
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #475ba6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    opacity: 0;
+    height: 100%;
+    /* opacity: 0.7; */
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-bar-overlay {
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #333A78;
+    width: 100%;
+    opacity: 0.7;
+    height: 100%;
+}
+
+.over-nav-bar-overlay {
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.nav-link {
+    width: 100%;
+    height: 15%;
+    /* background-color: white; */
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0.3; */
+    position: relative;
+
+}
+
+.nav-link-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    opacity: 0.3;
+}
+
+
+.nav-link-overlay:hover {
+    background-color: rgb(146, 144, 144);
+    cursor: pointer;
+}
+
+.over-nav-bar-overlay > .nav-link:nth-child(2) {
+    margin-top: 5rem;
+}
+
+.link {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+}
+
+.home-body {
+    width: 100%;
+    height: 60%;
+}
+
+@media only screen and (min-width: 1600px) {
+    .home-section {
+        width: 80%;
+        height: 100%;
+        background-color: #232C3D;
+    }
+    .text:nth-child(1) {
+        font-size: 32px;
+        color: white;
+        font-weight: bold;
+    }
+    .text:nth-child(2) {
+        font-size: 20px;
+        color: white;
+        font-weight: 500;
+    }
+
+    .fa-solid.fa-magnifying-glass {
+        color: white;
+        font-size: 24px;
+        margin-top: 1rem;
+    }
+
+    .link {
+        font-size: 24px;
+        text-decoration: none;
+        color: white;
+        position: absolute;
+    }
+
+    .form-input {
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+    }
+
+    .fa-solid.fa-x {
+        top: 1.4rem;
+    }
+  }
