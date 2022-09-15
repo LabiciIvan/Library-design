@@ -37,7 +37,7 @@ function hideMenu() {
     }, "-=0.2").to(".fa-solid.fa-bars", 
     {
         opacity: 1,
-    });
+    }, "-= 1");
 }
 
 function showSearchBar() {
