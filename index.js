@@ -28,17 +28,44 @@ function test2(e) {
                        'The Brothers Karamazov by Fyodor Dostoyevsky' ];
 
     let bodyElement = document.querySelector('.home-body');
-
+        bodyElement.innerHTML = "";
+    
+    
+    
     for(let i = 0; i < bookArray.length; ++i) {
-
+        
         let elementCreated = `<div class='body-result'>
-                                <a href='#' class='body-link'>${bookArray[i]}</a>
-                             </div>`;
-
+        <a href='#' class='body-link'>${bookArray[i]}</a>
+        </div>`;
+        
         bodyElement.innerHTML += elementCreated;
+        
     }
+    
+    let lt2 = gsap.timeline({duration: 1});
 
-    console.log(bodyElement);
+        // lt2.to('.body-result', {
+        //     display: 'flex'
+        // }, "-=1");
+
+        // .to('.body-link', {
+        //     display: 'flex',
+        // }, "-=1");
+
+    let getAllLinks = document.querySelectorAll('.body-link');
+
+    for(let i = 0; i < getAllLinks.length; ++i) {
+        
+        lt2.to('.body-result', {
+            display: 'flex'
+        }, "-=1").from(getAllLinks[i], {
+            display: 'none',
+            ease: "back.out(1.7)", y: -200
+        }, "-=0.3");
+    }
+    console.log(getAllLinks[0]);
+    
+    
 }
 
 
