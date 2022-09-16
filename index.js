@@ -39,19 +39,9 @@ function test2(e) {
         </div>`;
         
         bodyElement.innerHTML += elementCreated;
-        
     }
     
     let lt2 = gsap.timeline({duration: 1});
-
-        // lt2.to('.body-result', {
-        //     display: 'flex'
-        // }, "-=1");
-
-        // .to('.body-link', {
-        //     display: 'flex',
-        // }, "-=1");
-
     let getAllLinks = document.querySelectorAll('.body-link');
 
     for(let i = 0; i < getAllLinks.length; ++i) {
@@ -62,15 +52,12 @@ function test2(e) {
             display: 'none',
             ease: "back.out(1.7)", y: -200
         }, "-=0.3");
-    }
-    console.log(getAllLinks[0]);
-    
-    
+    }  
 }
 
 
 function showMenu() {
- 
+
     
     let navLinks = document.querySelectorAll('.nav-link');
     
